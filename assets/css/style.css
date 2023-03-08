@@ -1,0 +1,112 @@
+img {
+  max-width: 100%;
+}
+body,
+h1,
+p {
+  margin: 0;
+}
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-size: 15px;
+}
+.bg-component {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.component {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-start;
+}
+.column {
+  max-width: 178px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 20px;
+}
+.column:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.column:nth-child(1) button {
+  color: hsl(31, 77%, 52%);
+}
+.column:nth-child(1) button:hover {
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(0, 0%, 95%);
+}
+.column:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.column:nth-child(2) button {
+  color: hsl(184, 100%, 22%);
+}
+.column:nth-child(2) button:hover {
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(0, 0%, 95%);
+}
+.column:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.column:nth-child(3) button {
+  color: hsl(179, 100%, 13%);
+}
+.column:nth-child(3) button:hover {
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(0, 0%, 95%);
+}
+button {
+  margin-top: 50px;
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+}
+section p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.4;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 13px;
+}
+.column h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-size: 35px;
+}
+@media (max-width: 713px) {
+  .bg-component {
+    margin-bottom: 100px;
+  }
+  .component {
+    grid-template-columns: 1fr;
+  }
+  .column:nth-child(1) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0;
+  }
+  .column:nth-child(3) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
